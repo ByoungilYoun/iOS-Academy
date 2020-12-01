@@ -39,10 +39,26 @@ class WebViewController : UIViewController {
     view.backgroundColor = .systemBackground
     view.addSubview(webView)
     webView.load(URLRequest(url: url))
+    configureButtons()
   }
   
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     webView.frame = view.bounds
+  }
+  
+  //MARK: - func configureButtons()
+  private func configureButtons() {
+    navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapButton))
+    navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(didTapRefresh))
+  }
+  
+  @objc private func didTapButton() {
+    dismiss(animated: true, completion: nil)
+  }
+  
+  @objc private func didTapRefresh() {
+    // 다시 load 를 해주면서 refresh 를 해준다.
+    webView.load(URLRequest(url: url))
   }
 }
