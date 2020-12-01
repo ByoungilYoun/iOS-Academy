@@ -27,7 +27,10 @@ class ViewController: UIViewController {
   }
   
   @objc private func didTapButton() {
-    
+    guard let url = URL(string: "https://www.google.com") else {return}
+    let vc = WebViewController(url: url, title: "Google")
+    let navVC = UINavigationController(rootViewController: vc)
+    present(navVC, animated: true, completion: nil)
   }
 
 
