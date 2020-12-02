@@ -36,6 +36,9 @@ class ViewController: UIViewController {
     tableView.dataSource = self
     tableView.frame = view.bounds
     
+    let header = StretchyTableHeaderView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.width))
+    header.imageView.image = UIImage(named: "image")
+    tableView.tableHeaderView = header
   }
 }
 
