@@ -13,6 +13,7 @@
 		0F2222012577E2F6002EEFB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2221FF2577E2F6002EEFB2 /* Main.storyboard */; };
 		0F2222032577E2F7002EEFB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F2222022577E2F7002EEFB2 /* Assets.xcassets */; };
 		0F2222062577E2F7002EEFB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2222042577E2F7002EEFB2 /* LaunchScreen.storyboard */; };
+		0F22220F2577F41E002EEFB2 /* StretchyTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F22220E2577F41E002EEFB2 /* StretchyTableHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0F2222022577E2F7002EEFB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F2222052577E2F7002EEFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F2222072577E2F7002EEFB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F22220E2577F41E002EEFB2 /* StretchyTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyTableHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				0F2221F92577E2F6002EEFB2 /* AppDelegate.swift */,
 				0F2221FB2577E2F6002EEFB2 /* SceneDelegate.swift */,
+				0F22220E2577F41E002EEFB2 /* StretchyTableHeaderView.swift */,
 				0F2221FD2577E2F6002EEFB2 /* ViewController.swift */,
 				0F2221FF2577E2F6002EEFB2 /* Main.storyboard */,
 				0F2222022577E2F7002EEFB2 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			files = (
 				0F2221FE2577E2F6002EEFB2 /* ViewController.swift in Sources */,
 				0F2221FA2577E2F6002EEFB2 /* AppDelegate.swift in Sources */,
+				0F22220F2577F41E002EEFB2 /* StretchyTableHeaderView.swift in Sources */,
 				0F2221FC2577E2F6002EEFB2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
