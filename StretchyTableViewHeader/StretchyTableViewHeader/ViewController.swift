@@ -26,6 +26,16 @@ class ViewController: UIViewController {
     "London",
     "Hong Kong",
     "Seoul",
+    "LA",
+    "New York",
+    "London",
+    "Hong Kong",
+    "Seoul",
+    "LA",
+    "New York",
+    "London",
+    "Hong Kong",
+    "Seoul",
     "LA"
   ]
   //MARK: - LifeCycle
@@ -62,3 +72,10 @@ extension ViewController : UITableViewDataSource {
   
 }
 
+ //MARK: - ScrollViewDelegate
+extension ViewController : UIScrollViewDelegate {
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    guard let header = tableView.tableHeaderView as? StretchyTableHeaderView else {return}
+    header.scrollViewdidScroll(scrollView: tableView)
+  }
+}
