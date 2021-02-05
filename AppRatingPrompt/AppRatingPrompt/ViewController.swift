@@ -32,12 +32,27 @@ class ViewController: UIViewController {
 
   //MARK: - @objc func didTapButton
   @objc private func didTapButton() {
-    guard let scene = view.window?.windowScene else {
-      print("no scene")
-      return
-    }
+    let alert = UIAlertController(title: "Feedback", message: "Are you enjoying app?", preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
     
-    SKStoreReviewController.requestReview(in: scene)
+    // 사용자들이 좋아하면 평점을 받는다.
+    alert.addAction(UIAlertAction(title: "Yes, I love it", style: .default, handler: { [weak self] _ in
+      guard let scene = self?.view.window?.windowScene else {
+        print("no scene")
+        return
+      }
+      SKStoreReviewController.requestReview(in: scene)
+    }))
+    
+    // 사용자들이 별로 싫어하면 평점을 안받고 피드백을 받는다.
+    alert.addAction(UIAlertAction(title: "No, it sucks!", style: .default, handler: { _ in
+      // collect feedback
+      // 1. Prompt user to email you
+      // 2. Open safari to your contact page
+    }))
+    
+    present(alert, animated: true, completion: nil)
+    
   }
 
 }
