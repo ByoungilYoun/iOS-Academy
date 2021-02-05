@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     return lb
   }()
   
+//  let userDefaults = UserDefaults(suiteName: "com.byoungil.youn.UserDefaultsPractice")
   //MARK: - Function (viewDidLoad)
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -42,6 +43,10 @@ class ViewController: UIViewController {
     }
     
     myTextField.delegate = self
+    
+    if let value = UDM.shared.defaults.value(forKey: "name") as? String {
+      myLabel.text = value
+    }
     
     NSLayoutConstraint.activate([
       myTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
@@ -60,6 +65,20 @@ class ViewController: UIViewController {
   //MARK: - UITextFieldDelegate
 extension ViewController : UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    return true 
+    UDM.shared.defaults.setValue(myTextField.text, forKey: "name")
+    myTextField.resignFirstResponder()
+    return true
   }
+}
+
+// User Default Manager
+class UDM {
+  static let shared = UDM()
+//  let defaults = UserDefaults(suiteName: "com.byoungil.youn.UserDefaultsPractice")!
+  let defaults = UserDefaults()
+  
+  // Other funcs , 예를 들면
+//  func getName() -> String {
+//    return ""
+//  }
 }
