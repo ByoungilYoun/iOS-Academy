@@ -41,13 +41,33 @@ class ViewController: UIViewController {
   @objc private func showAlert() {
     let alert = UIAlertController(title: "Sign In With Apple ID", message: "Please sign in to your account to continue", preferredStyle: .alert)
     
+    // Add 2 textFields
+    alert.addTextField { field in
+      field.placeholder = "Email Address"
+      field.returnKeyType = .next
+      field.keyboardType = .emailAddress
+    }
     
+    alert.addTextField { field in
+      field.placeholder = "Password"
+      field.returnKeyType = .continue
+      field.isSecureTextEntry = true
+    }
     
     // Add 2 buttons
     alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
     alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
       // Read textfield values
+      guard let fields = alert.textFields, fields.count == 2 else {return} // array of textFields
       
+      let emailField = fields[0]
+      let passwordField = fields[1]
+      
+      guard let email = emailField.text , !email.isEmpty, let password = passwordField.text, !password.isEmpty else {
+        print("Invalid entries ")
+        return
+      }
+      print("Email : \(email), Password : \(password)")
     }))
     present(alert, animated: true)
   }
