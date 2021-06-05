@@ -18,16 +18,11 @@ class ViewController: UIViewController {
     
     
     let newFolderUrl = url.appendingPathComponent("ios-academy") // ios-academy 라는 폴더 url 생성
-    let secondSubFolder = url.appendingPathComponent("second-test").appendingPathComponent("ios-academy").appendingPathComponent("ios-academy").appendingPathComponent("ios-academy") // 폴더 타고 타고 들어가는 구조
+//    let secondSubFolder = url.appendingPathComponent("second-test").appendingPathComponent("ios-academy").appendingPathComponent("ios-academy").appendingPathComponent("ios-academy") // 폴더 타고 타고 들어가는 구조
     
-    do {
-      // 디렉토리 폴더 생성 
-      try manager.createDirectory(at: newFolderUrl, withIntermediateDirectories: true, attributes: [:])
-      try manager.createDirectory(at: secondSubFolder, withIntermediateDirectories: true, attributes: [:])
-    }
-    catch {
-      print(error)
-    }
+    let fileUrl = newFolderUrl.appendingPathComponent("logs. txt") // logs.txt 라는 파일 생성
+    let data = "Writing text to a text file!".data(using : .utf8) // 텍스트 string 을 data 로 생성해서 content 에 넣으면 적힌다.
+    manager.createFile(atPath: fileUrl.path, contents: data, attributes: [FileAttributeKey.creationDate: Date()])
     
   }
 
