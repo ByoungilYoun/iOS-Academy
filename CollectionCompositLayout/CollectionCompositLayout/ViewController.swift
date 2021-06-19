@@ -9,11 +9,34 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  //MARK: - Properties
+  
+  private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+  
+  //MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    setCollectionView()
   }
-
-
+  
+  //MARK: - Functions
+  private func setCollectionView() {
+    view.addSubview(collectionView)
+    collectionView.register(MyCollectionViewCell.self, forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
+    collectionView.frame = view.bounds
+    collectionView.backgroundColor = .white
+    collectionView.dataSource = self
+  }
 }
 
+  //MARK: - extension UICollectionViewDataSource
+extension ViewController : UICollectionViewDataSource {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return 30
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath)
+    return cell
+  }
+}
