@@ -15,6 +15,7 @@
 		0FA4BF37267E281300475EE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA4BF35267E281300475EE9 /* LaunchScreen.storyboard */; };
 		0FA4BF42267E281300475EE9 /* CollectionCompositLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4BF41267E281300475EE9 /* CollectionCompositLayoutTests.swift */; };
 		0FA4BF4D267E281300475EE9 /* CollectionCompositLayoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4BF4C267E281300475EE9 /* CollectionCompositLayoutUITests.swift */; };
+		0FA4BF5B267E297F00475EE9 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4BF5A267E297F00475EE9 /* MyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0FA4BF48267E281300475EE9 /* CollectionCompositLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionCompositLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA4BF4C267E281300475EE9 /* CollectionCompositLayoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCompositLayoutUITests.swift; sourceTree = "<group>"; };
 		0FA4BF4E267E281300475EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FA4BF5A267E297F00475EE9 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				0FA4BF2A267E281200475EE9 /* AppDelegate.swift */,
 				0FA4BF2C267E281200475EE9 /* SceneDelegate.swift */,
 				0FA4BF2E267E281200475EE9 /* ViewController.swift */,
+				0FA4BF5A267E297F00475EE9 /* MyCollectionViewCell.swift */,
 				0FA4BF30267E281200475EE9 /* Main.storyboard */,
 				0FA4BF33267E281300475EE9 /* Assets.xcassets */,
 				0FA4BF35267E281300475EE9 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				0FA4BF2F267E281200475EE9 /* ViewController.swift in Sources */,
 				0FA4BF2B267E281200475EE9 /* AppDelegate.swift in Sources */,
+				0FA4BF5B267E297F00475EE9 /* MyCollectionViewCell.swift in Sources */,
 				0FA4BF2D267E281200475EE9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
