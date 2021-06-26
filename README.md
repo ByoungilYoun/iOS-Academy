@@ -11,3 +11,4 @@ Practice in iOS Academy (Youtube)
 8) [TextField Alert Practice](https://github.com/ByoungilYoun/iOS-Academy/blob/main/FieldsInAlert_Tutorial/FieldsInAlert_Tutorial/ViewController.swift).  
 9) [FileManager Practice](https://github.com/ByoungilYoun/iOS-Academy/blob/main/FileManagerTutorial/FileManagerTutorial/ViewController.swift).  
 10) [Confetti Animation Practice](https://github.com/ByoungilYoun/iOS-Academy/blob/main/ConfettiAnimationEffectTutorial/ConfettiAnimationEffectTutorial/ViewController.swift).  
+11). [Pinch To Zoom Gesture](https://github.com/ByoungilYoun/iOS-Academy/blob/main/PinchToZoomGesture/PinchToZoomGesture/ViewController.swift). 
