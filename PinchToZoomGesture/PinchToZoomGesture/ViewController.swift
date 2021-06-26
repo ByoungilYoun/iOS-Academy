@@ -9,11 +9,42 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  //MARK: - Properties
+  private let myView : UIView = {
+    let myView = UIView()
+    myView.backgroundColor = .systemPurple
+    return myView
+  }()
+  
+  private let size : CGFloat = 200
+  //MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    setView()
   }
 
-
+  //MARK: - Functions
+  private func setView() {
+    view.addSubview(myView)
+    myView.frame = CGRect(x: 0, y: 0, width: size, height: size)
+    myView.center = view.center
+    
+    addGesture()
+  }
+  
+  private func addGesture() {
+    let pinchGesture = UIPinchGestureRecognizer(target: self,
+                                                action: #selector(didPinch(_:)))
+    myView.addGestureRecognizer(pinchGesture)
+  }
+  
+  //MARK: - @objc func
+  @objc private func didPinch(_ gesture : UIPinchGestureRecognizer) {
+    if gesture.state == .changed {
+      let scale = gesture.scale
+      myView.frame = CGRect(x: 0, y: 0, width: size * scale, height: size * scale)
+      myView.center = view.center
+    }
+  }
 }
 
